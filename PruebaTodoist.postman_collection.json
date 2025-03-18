@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "d7474ebe-9f8c-4382-beab-3b4611927beb",
+		"name": "PruebaTodoist",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42596271"
+	},
+	"item": [
+		{
+			"name": "POST",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{key}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"2203306141\",\r\n    \"name\": \"prueba\",\r\n    \"comment_count\": 0,\r\n    \"color\": \"blue\",\r\n    \"is_shared\": false,\r\n    \"order\": 1,\r\n    \"is_favorite\": false,\r\n    \"is_inbox_project\": false,\r\n    \"is_team_inbox\": false,\r\n    \"view_style\": \"list\",\r\n    \"url\": \"https://todoist.com/showProject?id=2203306141\",\r\n    \"parent_id\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.todoist.com/rest/v2/projects",
+					"protocol": "https",
+					"host": [
+						"api",
+						"todoist",
+						"com"
+					],
+					"path": [
+						"rest",
+						"v2",
+						"projects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{key}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.todoist.com/rest/v2/projects/2349370313\n",
+					"protocol": "https",
+					"host": [
+						"api",
+						"todoist",
+						"com"
+					],
+					"path": [
+						"rest",
+						"v2",
+						"projects",
+						"2349370313\n"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{key}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.todoist.com/rest/v2/projects/2349370313\n",
+					"protocol": "https",
+					"host": [
+						"api",
+						"todoist",
+						"com"
+					],
+					"path": [
+						"rest",
+						"v2",
+						"projects",
+						"2349370313\n"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{key}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"22033061423\",\r\n    \"name\": \"Shopping List\",\r\n    \"comment_count\": 1,\r\n    \"color\": \"charcoal\",\r\n    \"is_shared\": false,\r\n    \"order\": 1,\r\n    \"is_favorite\": true,\r\n    \"is_inbox_project\": false,\r\n    \"is_team_inbox\": false,\r\n    \"view_style\": \"list\",\r\n    \"url\": \"https://todoist.com/showProject?id=2203306141\",\r\n    \"parent_id\": null\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.todoist.com/rest/v2/tasks/22033061423",
+					"protocol": "https",
+					"host": [
+						"api",
+						"todoist",
+						"com"
+					],
+					"path": [
+						"rest",
+						"v2",
+						"tasks",
+						"22033061423"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
